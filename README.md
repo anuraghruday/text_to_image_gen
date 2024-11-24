@@ -1,6 +1,9 @@
-# Final Project Instructions to run the Code
+# Text-to-Image Generation Using Latent Diffusion Models and Conditional GANs
 
-In this project we implemented 3 models.
+## Project Overview
+This project uses advanced AI techniques to generate vivid and expressive images from textual descriptions. Our approach integrates Conditional Generative Adversarial Networks (cGANs) and Latent Diffusion Models (LDMs) to bridge the semantic gap between textual inputs and visual outputs. We explore multiple architectures, including a BERT-based text encoder, to generate high-quality, contextually accurate images.
+
+This model implements three models:
 * Pre-trained LDM Model
 * cGAN using AFHQ dataset
 * cGAN BERT model usiing COCO dataset
@@ -9,19 +12,20 @@ In this project we implemented 3 models.
 # 1. Pretrained LDM Model
 
 ## Dependencies 
+Install the required packages using the commands below:
 
 ```cmd
 pip install transformers==4.19.2 scann kornia==0.6.4 torchmetrics==0.6.0
 pip install git+https://github.com/arogozhnikov/einops.git
 ```
 
-## Running LDM Script
+## Running LDM Model
 
-The file contains all the code that is necessary to run the model. It doesnt require additional file
+The file contains all the code that is necessary to run the model. It dosen't require additional files.
 
 * Load the code in colab and run Inferencing_LDM.ipynb cells 
 
-## Results using LDM model
+## Results using the LDM model
 
 ![](overleaf_files/a_happy_bear.png)
 
@@ -31,7 +35,7 @@ The file contains all the code that is necessary to run the model. It doesnt req
 * run cgan_afhq.ipynb 
 
 ## Dataset 
-Dataset can be downloaded from below menioned link
+Dataset can be downloaded from below mentioned link
 [https://www.kaggle.com/datasets/andrewmvd/animal-faces](https://www.kaggle.com/datasets/andrewmvd/animal-faces)
 
 ## Results
@@ -89,14 +93,14 @@ The model is trained on the COCO dataset, specifically the `train2017` subset al
 
 ## Setup
 
-There are 2 version of this model
+There are 2 versions of this model
 * cgan_bert.ipynb
 * cgan_bert_Pnp.ipynb
 
-The cgan_bert.ipynb requires you to have COCO dataset available on local machine in order to run it 
-cgan_bert_PnP.ipynb is Plug and Play file. Ways to get the COCO data set is coded in the file no extra files are required to run the file except for the dependencies
+The cgan_bert.ipynb requires you to have the COCO dataset available on the local machine to run it 
+cgan_bert_PnP.ipynb is a Plug and Play file. Ways to get the COCO data set are coded in the file no extra files are required to run the file except for the dependencies
 
-Below is the link to saved model weights of cgan_bert.ipynb
+Below is the link to the saved model weights of cgan_bert.ipynb
 
 ## Weights Download link
 [https://drive.google.com/drive/folders/1LZYRykzSzItOhJKM_TqZmcfbYdAvOVbt?usp=sharing](https://drive.google.com/drive/folders/1LZYRykzSzItOhJKM_TqZmcfbYdAvOVbt?usp=sharing)
@@ -109,11 +113,11 @@ Below is the link to saved model weights of cgan_bert.ipynb
 
 ## ! Caution
 
-COCO dataset is large and uses large amount of resources.
-Make sure to change the path of COCO dataset if you are running cgan_ber.ipynb. And if your system runs out of memory (Out Of Memory Error:) try reducing the batch size
+The COCO dataset is large and uses a large amount of resources.
+Make sure to change the path of the COCO dataset if you are running cgan_ber.ipynb. And if your system runs out of memory (Error:) try reducing the batch size
 ## Requirements
 
-* Ubuntu 22.04, Nvidia Graphics Card atleast 40GB, 32GB cpu ram, Cuda 12.0  
+* Ubuntu 22.04, Nvidia Graphics Card at least 40GB, 32GB CPU ram, Cuda 12.0  
 * Python3.8 is required to run the LDM repository
 * COCO Dataset
 
